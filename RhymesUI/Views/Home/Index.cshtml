@@ -1,0 +1,40 @@
+﻿@model RhymesUI.Models.UserViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="row mt-5">
+        <div class="col-md-5 ">
+            <div class="card">
+                <div class="card-header bg-danger text-center p-5">
+                    <img src="https://rhbooks.com.ng/wp-content/uploads/2018/03/new-roving-heights-books-logoWHITE.png" class="img-fluid" asp-append-version="true"/>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="" asp-controller="">
+                        
+                        <div class="form-group">
+                            <input asp-for="Email" type="email" class="form-control form-control-user" placeholder="Enter Your Email Address" />
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Password" type="password" class="form-control form-control-user" placeholder="Password" />
+                        </div>
+                        
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-block btn-danger btn-user">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="text-center">
+                        <a href="#" class="small">Forgot Password?</a>
+                    </div>
+                    <div class="text-center">
+                        <a asp-action="Register" asp-controller="Account" class="small">Create an Account!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
